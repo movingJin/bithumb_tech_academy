@@ -12,29 +12,40 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
+
+    @Override
+    public boolean existsByUsername(String username) {
+        return userRepository.existsByUsername(username);
+    }
+
     @Override
     public List<User> findAll() {
         return userRepository.findAll();
     }
 
     @Override
-    public Optional<User> findById(long id) {
-        return userRepository.findById(id);
+    public Optional<User> findByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
     @Override
-    public boolean existsById(long id) {
-        return userRepository.existsById(id);
+    public User signin(String user, String password) {
+        return userRepository.signin(user, password);
+    }
+
+    @Override
+    public User getById(long id) {
+        return userRepository.getById(id);
+    }
+
+    @Override
+    public void save(User user) {
+        userRepository.save(user);
     }
 
     @Override
     public int count() {
         return (int)userRepository.count();
-    }
-
-    @Override
-    public void save(User entity) {
-        userRepository.save(entity);
     }
 
     @Override

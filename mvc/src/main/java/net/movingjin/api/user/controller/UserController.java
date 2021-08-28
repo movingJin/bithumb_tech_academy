@@ -19,13 +19,13 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public Optional<User> findById(@PathVariable long id) {
-        return userService.findById(id);
+    public Optional<User> findByUsername(@PathVariable String username) {
+        return userService.findByUsername(username);
     }
 
     @GetMapping("/exists")
-    public boolean existsById(long id) {
-        return userService.existsById(id);
+    public boolean existsByUsername(String username) {
+        return userService.existsByUsername(username);
     }
 
     @GetMapping("/count")
