@@ -14,7 +14,7 @@ public class IteratorPattern {
     }
 
     class MyArrayList{
-        Object[] elements = new Object[5];
+        Object[] elements;
 
         public MyArrayList(Object[] elements){
             this.elements = elements;
