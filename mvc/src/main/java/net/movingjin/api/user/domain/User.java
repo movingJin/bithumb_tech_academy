@@ -14,6 +14,7 @@ import java.util.List;
 @Table(name = "users")
 public class User { //보안을 위해 분리시켜 둠(DB용)
     @Id @Column(name = "user_id")
+    @GeneratedValue
     private long userId;
 
     @Column(name = "username", unique = true, nullable = false)
