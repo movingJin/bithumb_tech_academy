@@ -8,6 +8,6 @@ spring:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     data:
       mongodb:
-        uri: mongo://192.168.0.36:2701/test
+        uri: mongo://192.168.0.36:27017/test
 server:
   port: 8081
