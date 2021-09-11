@@ -1,0 +1,25 @@
+spring:
+  kafka:
+    admin:
+      properties:
+        spring:
+          json:
+            value.default.type: com.movingjin.api.kafka.domain.User
+  application:
+    name: kafka-consumer
+server:
+  port: 9091
+
+#spring:
+#  kafka:
+#    consumer:
+#      bootstrap-servers: 192.168.0.36:9092
+#      group-id: myGroup
+#      auto-offset-reset: earliest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    data:
+#      mongodb:
+#        uri: mongo://192.168.0.36:27017/test
+#server:
+#  port: 8081
