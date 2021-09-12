@@ -49,6 +49,9 @@ public class UserServiceImpl implements UserService {
                     ? securityProvider.createToken(user.getUsername(), userRepository.findByUsername(user.getUsername()).get().getRoles())
                     : "Wrong Password";
             userDto.setToken(token);
+            userDto.setName(userRepository.findByUsername(user.getName()).get().getName());
+            userDto.setEmail(userRepository.findByUsername(user.getName()).get().getEmail());
+            userDto.setUserId(userRepository.findByUsername(user.getName()).get().getUserId());
             return userDto;
         }
         catch (Exception e){

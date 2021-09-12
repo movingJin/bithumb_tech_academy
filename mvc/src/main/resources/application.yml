@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/mariadb
-    username: root
-    password: root
+    url: jdbc:mariadb://bithumb-db.cmudwdmaneme.ap-northeast-2.rds.amazonaws.com:3306/mariadb
+    username: admin
+    password: sh110930sh35!
 
   jpa:
     hibernate:
