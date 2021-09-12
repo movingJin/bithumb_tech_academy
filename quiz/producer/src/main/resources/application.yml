@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: kafka-producer
+server:
+  port: 9090
+
+######################Docker Setting######################################
+#spring:
+#  kafka:
+#    consumer:
+#      bootstrap-servers: 192.168.0.36:9092
+#      group-id: myGroup
+#      auto-offset-reset: earliest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    data:
+#      mongodb:
+#        uri: mongo://192.168.0.36:27017/test
+#server:
+#  port: 8081
